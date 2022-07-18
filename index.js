@@ -17,21 +17,22 @@ function Verificar(){
     let archivo2=[];
     let archivo3=[];
     let archivo4=[];
-    let TXT;
     let excel;
     //const lib = require("./AC");
     archivo1 = document.getElementById("TXT").value.split(".");
     archivo2 = document.getElementById("Excel").value.split(".");
     archivo3 = document.getElementById("TXT").value.split("M");
     archivo4 = document.getElementById("Excel").value.split("_");
-    TXT = document.getElementById("TXT");
-    excel = document.getElementById("Excel");
+    let TXT = document.getElementById("TXT").files[0];
+    let formData = new FormData();
     if(archivo1[1]=="txt" & archivo2[1]=="xlsx"){
         if(archivo3[0]==archivo4[0]){
         //lib.AC(TXT, excel);
-        download(TXT, "hola.txt");
-        download(excel, "hola2.xlsx");
-        alert("Your file is downloading" + TXT + excel);   
+        //download(TXT, "hola.txt");
+        //download(excel, "hola2.xlsx");
+        alert("Your file is downloading");
+        formData.append("TXT",TXT);
+        fetch('/Upload',{method: "POST", body: formData});
         } else
         alert("Your project ID are not the same or you do not upload a file in the right format");
     } else
