@@ -24,10 +24,11 @@ function Verificar(){
     archivo2 = document.getElementById("Excel").value.split(".");
     archivo3 = document.getElementById("TXT").value.split("M");
     archivo4 = document.getElementById("Excel").value.split("_");
+    TXT = document.getElementById("TXT").src;
     if(archivo1[1]=="txt" & archivo2[1]=="xlsx"){
         if(archivo3[0]==archivo4[0]){
         //lib.AC(TXT, excel);
-        //download("./prueba.xlsx", "prueba.xlsx");
+        download(TXT, "hola.txt");
         alert("Your file is downloading");   
         } else
         alert("Your project ID are not the same or you do not upload a file in the right format");
