@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampere Compare</title>
+    <link rel="icon" href="icono.png">
+    <script src = "index.js" type = "text/javascript"/></script>
+    <style type="text/css">
+        .boton_1{
+          text-decoration: none;
+          padding: 3px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-family: helvetica;
+          font-weight: 300;
+          font-size: 25px;
+          font-style: italic;
+          color: #006505;
+          background-color: #82b085;
+          border-radius: 15px;
+          border: 3px double #006505;
+        }
+        .boton_1:hover{
+          opacity: 0.6;
+          text-decoration: none;
+        }
+        h1,img{
+        display:inline-block;
+        vertical-align: middle;
+        }
+        .main {
+        background-color: #009530 ;
+        }
+        
+    </style>
+</head>
+<body>
+  <body style="background-color:#dfd9c3;">
+  <div class="main">
+    <hr>
+    <img src="icono.png" aling="left" alt="" width=50 height=50/>
+    <h1 style="color:black">Ampere Compare</h1>
+    <hr>
+  </div>
+    <h2 label id="myLabel"> Enter your name:</label></h2>
+  <div id="next2" style="display:'';">
+    <input type="text" id="myText" size="40">
+    <br>
+    <br>
+    <input type = "button" onclick = "Hello();" class="boton_1" id="myButton"   value = "Submit" />
+    <br>
+    <br>
+    <br>
+  </div>  
+  <div id="next" style="display:none;">
+    <h3 style="color:black">Introduce RxxxxxxxMapics.txt</h3>
+    <img src="txt.png" aling="left" alt="" width=75 height=75/>
+    <input id="TXT" accept=".txt" name="archivo2" type="file"value="" />
+    <br>
+    <h3 style="color:black">Introduce Rxxxxxxx_xxxxxxxx-xxx-x data.xlsx</h3>
+    <img src="excel.png" aling="left" alt="" width=75 height=75/>
+    <input id="Excel" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" name="archivo1" type="file" value="" />
+    <br>
+    <br>
+    <br>
+    <input type = "button" onclick = "Verificar();" class="boton_1" id="myButton2"  value = "Submit" />
+  </div>
+</body>
+
+
+</html>
