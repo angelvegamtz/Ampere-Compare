@@ -28,8 +28,8 @@ function Verificar(){
     if(archivo1[1]=="txt" & archivo2[1]=="xlsx"){
         if(archivo3[0]==archivo4[0]){
         //lib.AC(TXT, excel);
-        download(TXT, "hola.txt");
-        alert("Your file is downloading");   
+        //download(TXT, "hola.txt");
+        alert("Your file is downloading" + TXT);   
         } else
         alert("Your project ID are not the same or you do not upload a file in the right format");
     } else
