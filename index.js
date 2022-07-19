@@ -24,15 +24,12 @@ function Verificar(){
     archivo3 = document.getElementById("TXT").value.split("M");
     archivo4 = document.getElementById("Excel").value.split("_");
     let TXT = document.getElementById("TXT").files[0];
-    let formData = new FormData();
     if(archivo1[1]=="txt" & archivo2[1]=="xlsx"){
         if(archivo3[0]==archivo4[0]){
         //lib.AC(TXT, excel);
         //download(TXT, "hola.txt");
         //download(excel, "hola2.xlsx");
-        alert("Your file is downloading");
-        formData.append("TXT",TXT);
-        fetch('/Upload',{method: "POST", body: formData});
+        alert("Your file is downloading"+ document.getElementById("TXT").value);
         } else
         alert("Your project ID are not the same or you do not upload a file in the right format");
     } else
